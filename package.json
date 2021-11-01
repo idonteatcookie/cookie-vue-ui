@@ -9,6 +9,10 @@
     "vue3 component"
   ],
   "author": "idonteatcookie",
+  "main": "dist/cookie.umd.js",
+  "module": "dist/cookie.es.js",
+  "typings": "dist/index.d.ts",
+  "files": ["dist"],
   "license": "MIT",
   "publishConfig": {
     "access": "public",
@@ -16,7 +20,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit && vite build --config vite.config.ts && vite build --config vite.config.build.disperse.ts && npm run build:types",
+    "build:types": "node gen-types.js",
     "serve": "vite preview",
     "format": "prettier . --write",
     "lint": "eslint --ext .js,.vue,.ts,.tsx,.jsx --ignore-path .gitignore --fix src",

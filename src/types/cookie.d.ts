@@ -1,6 +1,6 @@
 import { App } from 'vue'
 
-import { Button } from './button'
+import { Button } from './packages/button'
 
 declare function install(app: App): void
 

@@ -10,7 +10,6 @@ const banner = `/*!
 */`
 
 const input = {
-  // 组件单独打包
   button: `./src/packages/button/index.ts`
 }
 
@@ -29,19 +28,18 @@ export default defineConfig({
     },
     lib: {
       entry: '',
-      name: 'index',
       formats: ['es']
     },
     rollupOptions: {
       // 请确保外部化那些你的库中不需要的依赖
       external: ['vue'],
-      input, // https://rollupjs.org/guide/en/#input
+      input,
       output: {
         banner,
         dir: path.resolve(__dirname, './dist/packages'),
-        entryFileNames: '[name].js'
+        entryFileNames: '[name]/index.js'
       }
     },
-    emptyOutDir: false
+    emptyOutDir: false // 打包不清空输出目录
   }
 })

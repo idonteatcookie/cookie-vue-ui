@@ -12,7 +12,9 @@
   "main": "dist/cookieui.umd.js",
   "module": "dist/cookieui.es.js",
   "typings": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public",
@@ -22,7 +24,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build --config vite.config.ts && npm run build:disperse && npm run build:types && npm run build:style",
     "build:disperse": "vite build --config vite.config.build.disperse.ts",
-    "build:types": "node gen-types.js",
+    "build:types": "esno vue-dts-gen.ts",
     "build:style": "vite build --config vite.config.build.css.ts",
     "serve": "vite preview",
     "format": "prettier . --write",
@@ -44,9 +46,12 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^7.20.0",
+    "esno": "^0.11.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.4",
     "prettier": "^2.4.1",
+    "sass": "^1.43.4",
+    "ts-morph": "^12.2.0",
     "typescript": "^4.4.3",
     "vite": "^2.6.4",
     "vue-tsc": "^0.3.0"
@@ -55,8 +60,7 @@
     "*.md": "prettier --write",
     "*.{ts,tsx,js,vue}": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   }
 }

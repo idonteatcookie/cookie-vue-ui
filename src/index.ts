@@ -1,9 +1,10 @@
 import { App } from 'vue'
 
-import Button from './button'
+import Button from './packages/button'
+
+const packages = [Button]
 
 function install(app: App) {
-  const packages = [Button]
   packages.forEach((item: any) => {
     if (item.install) {
       app.use(item)

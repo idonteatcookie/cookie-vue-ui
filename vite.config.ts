@@ -29,7 +29,7 @@ export default defineConfig({
     },
     lib: {
       // 构建为库 https://vitejs.cn/guide/build.html#%E5%BA%93%E6%A8%A1%E5%BC%8F
-      entry: path.resolve(__dirname, 'src/packages/index.ts'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'cookie',
       fileName: 'cookieui',
       formats: ['es', 'umd'] // 为发行该库提供两种构建格式：es 和 umd

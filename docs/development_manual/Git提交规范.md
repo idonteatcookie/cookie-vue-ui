@@ -11,7 +11,7 @@ yarn add @commitlint/config-conventional @commitlint/cli -D
 
 创建配置文件 `commitlint.config.js`
 
-```json
+```js
 module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {

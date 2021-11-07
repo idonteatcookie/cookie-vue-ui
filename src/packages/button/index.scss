@@ -1,35 +1,77 @@
-.c-button {
-  padding: 4px 8px;
-  font-size: 14px;
-  border-radius: 3px;
-  border: none;
+@import '../../styles/variables.scss';
+
+.co-button {
+  padding: 8px 15px;
+  font-size: $font-size-base;
+  box-sizing: border-box;
   outline: none;
-}
-.c-button-primary {
-  background: purple;
-  color: #fff;
-}
-.c-button-success {
-  background: green;
-  color: #fff;
-}
-.c-button-info {
-  background: gray;
-  color: #fff;
-}
-.c-button-warning {
-  background: orange;
-  color: #fff;
-}
-.c-button-danger {
-  background: tomato;
-  color: #fff;
-}
-.c-button-large {
-  padding: 8px 16px;
-  font-size: 16px;
-}
-.c-button-small {
-  padding: 2px 4px;
-  font-size: 12px;
+  user-select: none;
+  color: $default-color;
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-base;
+  line-height: $line-height-base;
+  text-align: center;
+  font-family: $font-family;
+  cursor: pointer;
+  height: $default-height;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    border: inherit;
+    border-color: #000;
+    border-radius: inherit;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    content: ' ';
+  }
+  &:active::before {
+    opacity: 0.1;
+  }
+  // type
+  &--primary {
+    background: $primary-color;
+    color: #fff;
+    border-color: transparent;
+  }
+  &--success {
+    background: $success-color;
+    color: #fff;
+    border-color: transparent;
+  }
+  &--warning {
+    background: $warning-color;
+    color: #fff;
+    border-color: transparent;
+  }
+  &--danger {
+    background: $danger-color;
+    color: #fff;
+    border-color: transparent;
+  }
+  // size
+  &--large {
+    padding: 9px 20px;
+    font-size: $font-size-lg;
+    height: $lg-height;
+  }
+  &--small {
+    padding: 7px 10px;
+    font-size: $font-size-sm;
+    height: $sm-height;
+  }
+  // disabled
+  &--disabled {
+    &::before {
+      display: none;
+    }
+    cursor: not-allowed;
+    opacity: $disabled-opacity;
+  }
 }

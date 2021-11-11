@@ -33,7 +33,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "vue": "^3.2.16"
+    "vue": "^3.2.16",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",

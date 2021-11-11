@@ -1,56 +1,65 @@
-<script setup lang="ts">
-import { Button } from './packages/button'
-
-const onClick = () => {
-  console.log('clicked.')
-}
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <section>
-    <div class="subtitle">按钮类型</div>
-    <div class="content">
-      <Button @click="onClick">默认按钮</Button>
-      <Button type="primary">主要按钮</Button>
-      <Button type="success">成功按钮</Button>
-      <Button type="warning">警告按钮</Button>
-      <Button type="danger">危险按钮</Button>
+  <nav class="comp-nav">
+    <router-link to="/button" class="link-item">button</router-link>
+    <router-link to="/layout" class="link-item">layout</router-link>
+  </nav>
+  <main class="page-container">
+    <div class="comp-content">
+      <router-view></router-view>
     </div>
-  </section>
-
-  <section>
-    <div class="subtitle">按钮大小</div>
-    <div class="content">
-      <Button type="primary" size="large">大号按钮</Button>
-      <Button type="primary">普通按钮</Button>
-      <Button type="primary" size="small">小号按钮</Button>
-    </div>
-  </section>
-
-  <section>
-    <div class="subtitle">禁用按钮</div>
-    <div class="content">
-      <Button disabled>默认按钮</Button>
-      <Button type="primary" disabled>主要按钮</Button>
-      <Button type="success" disabled>成功按钮</Button>
-      <Button type="warning" disabled>警告按钮</Button>
-      <Button type="danger" disabled>危险按钮</Button>
-    </div>
-  </section>
+  </main>
 </template>
 
-<style>
-section {
-  border: 1px solid #d7d7d7;
-  margin-bottom: 20px;
-  padding: 10px;
+<style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.subtitle {
-  color: #888;
-  font-size: 16px;
-  margin-bottom: 5px;
+body,
+html {
+  height: 100%;
 }
-.content * {
-  margin-right: 10px;
+body {
+  background: #fafafa;
+}
+#app {
+  height: 100%;
+}
+.comp-nav {
+  margin-bottom: 10px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  background: #ffff;
+  box-shadow: 0 0 3px 3px rgb(0 0 0 / 10%);
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.link-item {
+  color: #838383;
+  display: inline-block;
+  padding: 0 10px;
+  &:hover {
+    background: orange;
+    color: #fff;
+  }
+}
+.page-container {
+  padding: 70px 20px 20px;
+}
+.comp-content {
+  width: 1000px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 2px 2px rgb(0 0 0 / 10%);
+  display: flow-root;
 }
 </style>

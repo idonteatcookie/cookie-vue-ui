@@ -10,7 +10,9 @@ const banner = `/*!
 */`
 
 const input = {
-  button: `./src/packages/button/index.ts`
+  button: `./src/packages/button/index.ts`,
+  row: `./src/packages/row/index.ts`,
+  col: `./src/packages/col/index.ts`
 }
 
 export default defineConfig({

@@ -1,8 +1,10 @@
 import { App } from 'vue'
 
 import Button from './packages/button'
+import Row from './packages/row'
+import Col from './packages/col'
 
-const packages = [Button]
+const packages = [Button, Row, Col]
 
 function install(app: App) {
   packages.forEach((item: any) => {
@@ -14,6 +16,6 @@ function install(app: App) {
   })
 }
 
-export { install, Button }
+export { install, Button, Row, Col }
 
 export default { install }

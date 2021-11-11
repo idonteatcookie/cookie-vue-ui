@@ -1,0 +1,32 @@
+@import '../../styles/mixin.scss';
+.co-row {
+  @include clearfix;
+
+  &--flex {
+    display: flex;
+  }
+
+  &--justify {
+    &-center {
+      justify-content: center;
+    }
+    &-end {
+      justify-content: end;
+    }
+    &-space-around {
+      justify-content: space-around;
+    }
+    &-space-between {
+      justify-content: space-between;
+    }
+  }
+
+  &--align {
+    &-center {
+      align-items: center;
+    }
+    &-end {
+      align-items: end;
+    }
+  }
+}

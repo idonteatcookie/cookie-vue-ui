@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .co-col {
   float: left;
   box-sizing: border-box;
@@ -7,19 +9,19 @@
 
   @for $i from 0 through 24 {
     &-#{$i} {
-      width: (1 / 24 * $i * 100) * 1%;
+      width: (math.div(1, 24) * $i * 100) * 1%;
     }
     &-offset-#{$i} {
-      margin-left: (1 / 24 * $i * 100) * 1%;
+      margin-left: (math.div(1, 24) * $i * 100) * 1%;
     }
     &-pull-#{$i} {
       position: relative;
-      right: (1 / 24 * $i * 100) * 1%;
+      right: (math.div(1, 24) * $i * 100) * 1%;
     }
 
     &-push-#{$i} {
       position: relative;
-      left: (1 / 24 * $i * 100) * 1%;
+      left: (math.div(1, 24) * $i * 100) * 1%;
     }
   }
 }

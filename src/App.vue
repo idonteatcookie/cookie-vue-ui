@@ -1,9 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const components = ['button', 'layout', 'icon']
+</script>
 
 <template>
   <nav class="comp-nav">
-    <router-link to="/button" class="link-item">button</router-link>
-    <router-link to="/layout" class="link-item">layout</router-link>
+    <router-link v-for="item in components" :key="item" :to="'/' + item" class="link-item">
+      {{ item }}
+    </router-link>
   </nav>
   <main class="page-container">
     <div class="comp-content">

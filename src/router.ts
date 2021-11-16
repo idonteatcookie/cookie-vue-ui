@@ -10,6 +10,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/layout',
     name: 'layout',
     component: () => import('@/views/layout/index.vue')
+  },
+  {
+    path: '/icon',
+    name: 'icon',
+    component: () => import('@/views/icon/index.vue')
   }
 ]
 

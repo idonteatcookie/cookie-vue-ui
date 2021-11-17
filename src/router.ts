@@ -15,6 +15,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/icon',
     name: 'icon',
     component: () => import('@/views/icon/index.vue')
+  },
+  {
+    path: '/alert',
+    name: 'alert',
+    component: () => import('@/views/alert/index.vue')
   }
 ]
 

@@ -4,8 +4,9 @@ import Button from './packages/button'
 import Row from './packages/row'
 import Col from './packages/col'
 import Icon from './packages/icon'
+import Alert from './packages/alert'
 
-const packages = [Button, Row, Col, Icon]
+const packages = [Button, Row, Col, Icon, Alert]
 
 function install(app: App) {
   packages.forEach((item: any) => {

@@ -1,0 +1,81 @@
+@import '../../styles/variables.scss';
+
+.co-alert {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+  .is-center {
+    justify-content: center;
+  }
+  // type
+  &--default {
+    background: $default-color;
+    color: #000;
+    border-color: transparent;
+  }
+  &--primary {
+    background: $primary-color;
+    color: #000;
+    border-color: transparent;
+  }
+
+  &--success {
+    background: $success-color;
+    color: #000;
+    border-color: transparent;
+  }
+
+  &--warning {
+    background: $warning-color;
+    color: #000;
+    border-color: transparent;
+  }
+
+  &--danger {
+    background: $danger-color;
+    color: #000;
+    border-color: transparent;
+  }
+  .co-alert__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+
+  }
+  .co-alert__title {
+    font-size: $font-size-lg;
+    line-height: 16px;
+
+    .is-bold {
+      font-weight: bold;
+    }
+  }
+
+  .co-alert__description {
+    font-size: $font-size-sm;
+    margin: 5px 0 0 0;
+  }
+
+  .co-alert__closebtn {
+    font-size: $font-size-sm;
+    opacity: 1;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    cursor: pointer;
+  }
+}
+
+.co-alert-fade-enter-active,
+.co-alert-fade-leave-active {
+  opacity: 0;
+}

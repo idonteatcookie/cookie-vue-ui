@@ -16,6 +16,13 @@
   cursor: pointer;
   height: $default-height;
   position: relative;
+  i {
+    font-size: $font-size-base;
+  }
+
+  i + * {
+    margin-left: 4px;
+  }
 
   &::before {
     position: absolute;
@@ -60,11 +67,17 @@
     padding: 9px 20px;
     font-size: $font-size-lg;
     height: $lg-height;
+    i {
+      font-size: $font-size-lg;
+    }
   }
   &--small {
     padding: 7px 10px;
     font-size: $font-size-sm;
     height: $sm-height;
+    i {
+      font-size: $font-size-sm;
+    }
   }
   // disabled
   &--disabled {

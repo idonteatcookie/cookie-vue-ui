@@ -1,6 +1,9 @@
 <template>
   <button :class="classes" @click="onClick">
-    <slot></slot>
+    <i v-if="icon" :class="icon"></i>
+    <span v-if="$slots.default">
+      <slot></slot>
+    </span>
   </button>
 </template>
 
@@ -21,6 +24,10 @@ export default defineComponent({
     disabled: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String,
+      default: ''
     }
   },
   emits: ['click'],

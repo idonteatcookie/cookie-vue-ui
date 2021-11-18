@@ -35,6 +35,17 @@ const onClick = () => {
       <co-button type="danger" disabled>危险按钮</co-button>
     </div>
   </section>
+
+  <section>
+    <div class="subtitle">图标按钮</div>
+    <div class="content">
+      <co-button icon="co-icon-bi">编辑</co-button>
+      <co-button icon="co-icon-loading">加载中</co-button>
+      <co-button type="primary" size="small" icon="co-icon-shangyiye">上一页</co-button>
+      <co-button type="success" size="large" icon="co-icon-chaxun">查询</co-button>
+      <co-button type="danger" icon="co-icon-lajitong"></co-button>
+    </div>
+  </section>
 </template>
 
 <style>
@@ -48,7 +59,7 @@ section {
   font-size: 16px;
   margin-bottom: 5px;
 }
-.content * {
+.content .co-button {
   margin-right: 10px;
 }
 </style>

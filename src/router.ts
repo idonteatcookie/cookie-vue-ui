@@ -24,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/cookie-vue-ui/'),
   routes
 })
 

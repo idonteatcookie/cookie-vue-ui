@@ -121,7 +121,7 @@
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .co-row {
   margin-bottom: 20px;
   &:last-child {

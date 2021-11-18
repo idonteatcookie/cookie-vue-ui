@@ -1172,7 +1172,7 @@
   </ul>
 </template>
 
-<style>
+<style scoped>
 .dib-box {
   border: 1px solid #d7d7d7;
   border-width: 1px 0 0 1px;

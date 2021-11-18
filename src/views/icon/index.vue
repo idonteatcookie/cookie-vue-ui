@@ -43,6 +43,12 @@
     </li>
 
     <li class="dib">
+      <span class="co-icon-loading"></span>
+      <div class="name"> 加载中 </div>
+      <div class="code-name">co-icon-loading </div>
+    </li>
+
+    <li class="dib">
       <span class="co-icon-xiangqian"></span>
       <div class="name"> 向前 </div>
       <div class="code-name">co-icon-xiangqian </div>

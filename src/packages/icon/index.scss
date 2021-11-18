@@ -9,6 +9,7 @@
   font-family: 'cookie-iconfont' !important;
   font-size: 16px;
   font-style: normal;
+  display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -787,4 +788,21 @@
 
 .co-icon-wangyuanjing:before {
   content: '\e86a';
+}
+
+.co-icon-loading:before {
+  content: '\e756';
+}
+
+.co-icon-loading {
+  animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }

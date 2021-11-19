@@ -48,7 +48,7 @@ const onClick = () => {
   </section>
 </template>
 
-<style>
+<style scoped>
 section {
   border: 1px solid #d7d7d7;
   margin-bottom: 20px;

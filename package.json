@@ -22,7 +22,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build --config vite.config.ts && npm run build:disperse && npm run build:types && npm run build:style",
+    "build:demo": "vite build",
+    "build": "vue-tsc --noEmit && vite build --config vite.config.build.ts && npm run build:disperse && npm run build:types && npm run build:style",
     "build:disperse": "vite build --config vite.config.build.disperse.ts",
     "build:types": "esno vue-dts-gen.ts",
     "build:style": "vite build --config vite.config.build.css.ts",

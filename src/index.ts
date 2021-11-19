@@ -5,8 +5,9 @@ import Row from './packages/row'
 import Col from './packages/col'
 import Icon from './packages/icon'
 import Alert from './packages/alert'
+import Avatar from './packages/avatar'
 
-const packages = [Button, Row, Col, Icon, Alert]
+const packages = [Button, Row, Col, Icon, Alert, Avatar]
 
 function install(app: App) {
   packages.forEach((item: any) => {
@@ -18,6 +19,6 @@ function install(app: App) {
   })
 }
 
-export { install, Button, Row, Col, Icon }
+export { install, Button, Row, Col, Icon, Avatar }
 
 export default { install }

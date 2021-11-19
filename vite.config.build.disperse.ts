@@ -14,7 +14,8 @@ const input = {
   row: `./src/packages/row/index.ts`,
   col: `./src/packages/col/index.ts`,
   icon: './src/packages/icon/index.ts',
-  alert: `./src/packages/alert/index.ts`
+  alert: `./src/packages/alert/index.ts`,
+  avatar: `./src/packages/avatar/index.ts`
 }
 
 export default defineConfig({
@@ -36,7 +37,7 @@ export default defineConfig({
     },
     rollupOptions: {
       // 请确保外部化那些你的库中不需要的依赖
-      external: ['vue'],
+      external: ['vue', 'vue-router'],
       input,
       output: {
         banner,

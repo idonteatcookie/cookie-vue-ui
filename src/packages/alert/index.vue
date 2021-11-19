@@ -77,7 +77,7 @@ export default defineComponent({
       danger = 'xihuan'
     }
 
-    const iconName = computed(() => `co-icon--${iconEnum[props.type]}`)
+    const iconName = computed(() => `co-icon-${iconEnum[props.type]}`)
     const typeIcon = computed(() => `co-alert__icon--${props.type}`)
     const isBigIcon = computed(() => (props.description ? 'is-big' : '' || slots.default ? 'is-big' : ''))
 

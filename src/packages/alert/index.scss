@@ -45,39 +45,32 @@
     color: $danger-color;
     border-color: $border-color;
   }
+
   .co-alert__icon {
     color: $danger-color;
     font-size: 14px;
-    //&--default {
-    //  background: $default-color;
-    //  color: #000;
-    //  border-color: transparent;
-    //}
-    //
-    //&--primary {
-    //  background: $primary-color;
-    //  color: #000;
-    //  border-color: transparent;
-    //}
-    //
-    //&--success {
-    //  background: $success-color;
-    //  color: #000;
-    //  border-color: transparent;
-    //}
-    //
-    //&--warning {
-    //  background: $warning-color;
-    //  color: #000;
-    //  border-color: transparent;
-    //}
-    //
-    //&--danger {
-    //  background: $danger-color;
-    //  color: #000;
-    //  border-color: transparent;
-    //}
+
+    &--default {
+      color: $default-color;
+    }
+
+    &--primary {
+      color: $primary-color;
+    }
+
+    &--success {
+      color: $success-color;
+    }
+
+    &--warning {
+      color: $warning-color;
+    }
+
+    &--danger {
+      color: $danger-color;
+    }
   }
+
   .co-alert__content {
     display: flex;
     flex-direction: column;
@@ -117,6 +110,7 @@
 .is-center {
   justify-content: center;
 }
+
 .is-big {
   font-size: 16px;
 

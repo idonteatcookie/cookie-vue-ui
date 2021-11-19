@@ -1,6 +1,9 @@
 <template>
   <transition name="co-alert-fade">
     <div v-show="visible" class="co-alert" :class="[typeClass, center ? 'is-center' : '']" role="alert">
+      <!--      <i v-if="showIcon" class="co-alert__icon" :class="[iconName, typeIcon, isBigIcon]"> </i>-->
+      <CoIcon v-if="showIcon" class="co-alert__icon" :class="[iconName, typeIcon, isBigIcon]"></CoIcon>
+
       <div class="co-alert__content">
         <span v-if="title || $slots.title" class="co-alert__title" :class="[isBoldTitle]">
           <slot name="title">{{ title }}</slot>
@@ -14,10 +17,7 @@
           <div v-if="closeText" class="co-alert__closebtn" @click="close">
             {{ closeText }}
           </div>
-          <!--    暂时没有icon      -->
-          <!--          <el-icon v-else class="co-alert__closebtn" @click="close">-->
-          <!--            <close />-->
-          <!--          </el-icon>-->
+          <i v-else class="co-alert__closebtn co-icon-guanbi" @click="close"></i>
         </template>
       </div>
     </div>
@@ -26,9 +26,11 @@
 
 <script lang="ts">
 import { defineComponent, PropType, ref, computed } from 'vue'
+import CoIcon from '../icon/index'
 
 export default defineComponent({
   name: 'CoAlert',
+  components: { CoIcon },
   props: {
     title: {
       type: String,
@@ -51,8 +53,10 @@ export default defineComponent({
       default: ''
     },
     center: {
-      type: Boolean,
-      default: true
+      type: Boolean
+    },
+    showIcon: {
+      type: Boolean
     }
   },
   emits: ['close'],
@@ -64,12 +68,28 @@ export default defineComponent({
       visible.value = false
       emit('close', evt)
     }
+
+    enum iconEnum {
+      default = 'xiaoxi2',
+      primary = 'tongbu',
+      success = 'shoucang',
+      warning = 'weixiu',
+      danger = 'xihuan'
+    }
+
+    const iconName = computed(() => `co-icon--${iconEnum[props.type]}`)
+    const typeIcon = computed(() => `co-alert__icon--${props.type}`)
+    const isBigIcon = computed(() => (props.description ? 'is-big' : '' || slots.default ? 'is-big' : ''))
+
     // computed
     const typeClass = computed(() => `co-alert--${props.type}`)
     const isBoldTitle = computed(() => (props.description || slots.default ? 'is-bold' : ''))
     return {
       visible,
       typeClass,
+      iconName,
+      typeIcon,
+      isBigIcon,
       isBoldTitle,
       close
     }

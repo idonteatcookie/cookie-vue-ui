@@ -13,37 +13,70 @@
   display: flex;
   align-items: center;
   transition: opacity 0.2s;
-  .is-center {
-    justify-content: center;
-  }
+
+
   // type
   &--default {
-    background: $default-color;
-    color: #000;
-    border-color: transparent;
+    background: $default-bg-color;
+    color: $default-color;
+    border-color: $border-color;
   }
+
   &--primary {
-    background: $primary-color;
-    color: #000;
-    border-color: transparent;
+    background: $primary-bg-color;
+    color: $primary-color;
+    border-color: $border-color;
   }
 
   &--success {
-    background: $success-color;
-    color: #000;
-    border-color: transparent;
+    background: $success-bg-color;
+    color: $success-color;
+    border-color: $border-color;
   }
 
   &--warning {
-    background: $warning-color;
-    color: #000;
-    border-color: transparent;
+    background: $warning-bg-color;
+    color: $warning-color;
+    border-color: $border-color;
   }
 
   &--danger {
-    background: $danger-color;
-    color: #000;
-    border-color: transparent;
+    background: $danger-bg-color;
+    color: $danger-color;
+    border-color: $border-color;
+  }
+  .co-alert__icon {
+    color: $danger-color;
+    font-size: 14px;
+    //&--default {
+    //  background: $default-color;
+    //  color: #000;
+    //  border-color: transparent;
+    //}
+    //
+    //&--primary {
+    //  background: $primary-color;
+    //  color: #000;
+    //  border-color: transparent;
+    //}
+    //
+    //&--success {
+    //  background: $success-color;
+    //  color: #000;
+    //  border-color: transparent;
+    //}
+    //
+    //&--warning {
+    //  background: $warning-color;
+    //  color: #000;
+    //  border-color: transparent;
+    //}
+    //
+    //&--danger {
+    //  background: $danger-color;
+    //  color: #000;
+    //  border-color: transparent;
+    //}
   }
   .co-alert__content {
     display: flex;
@@ -51,6 +84,7 @@
     padding: 0 8px;
 
   }
+
   .co-alert__title {
     font-size: $font-size-lg;
     line-height: 16px;
@@ -78,4 +112,12 @@
 .co-alert-fade-enter-active,
 .co-alert-fade-leave-active {
   opacity: 0;
+}
+
+.is-center {
+  justify-content: center;
+}
+.is-big {
+  font-size: 16px;
+
 }

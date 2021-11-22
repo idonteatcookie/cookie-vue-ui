@@ -13,6 +13,21 @@ const onClick = () => {
       <co-avatar size="small"></co-avatar>
     </div>
   </section>
+  <section>
+    <div class="subtitle">头像形状</div>
+    <div class="content">
+      <co-avatar @click="onClick"></co-avatar>
+      <co-avatar shape="circle"></co-avatar>
+    </div>
+  </section>
+  <section>
+    <div class="subtitle">头像展示类型</div>
+    <div class="caption">默认为初始头像，或src填入指定图片地址</div>
+    <div class="content">
+      <co-avatar @click="onClick"></co-avatar>
+      <co-avatar src="https://cn.vuejs.org/images/logo.svg"></co-avatar>
+    </div>
+  </section>
 </template>
 <style scoped>
 section {
@@ -24,6 +39,11 @@ section {
   color: #888;
   font-size: 16px;
   margin-bottom: 5px;
+}
+.caption {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #888;
 }
 .content {
   display: flex;

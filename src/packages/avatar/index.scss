@@ -6,11 +6,12 @@
   text-align: center;
   overflow: hidden;
   color: #fff;
-  background: hsl(220, 11%, 78%);
+  // background: hsl(220, 11%, 78%);
   font-size: 14px;
   height: 40px;
   width: 40px;
   line-height: 40px;
+  object-fit: cover;
   // size
   &--large {
     height: 50px;
@@ -21,5 +22,8 @@
     height: 36px;
     width: 36px;
     line-height: 36px;
+  }
+  &--circle {
+    border-radius: 50%;
   }
 }

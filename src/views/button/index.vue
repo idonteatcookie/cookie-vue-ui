@@ -46,6 +46,17 @@ const onClick = () => {
       <co-button type="danger" icon="co-icon-lajitong"></co-button>
     </div>
   </section>
+
+  <section>
+    <div class="subtitle">按钮水波纹效果</div>
+    <div class="content">
+      <co-button ripple>默认按钮</co-button>
+      <co-button type="primary" ripple>主要按钮</co-button>
+      <co-button type="success" ripple>成功按钮</co-button>
+      <co-button type="warning" ripple>警告按钮</co-button>
+      <co-button type="danger" ripple>危险按钮</co-button>
+    </div>
+  </section>
 </template>
 
 <style scoped>

@@ -16,6 +16,7 @@
   cursor: pointer;
   height: $default-height;
   position: relative;
+  overflow: hidden;
   i {
     font-size: $font-size-base;
   }
@@ -86,5 +87,16 @@
     }
     cursor: not-allowed;
     opacity: $disabled-opacity;
+  }
+
+  .co-ripple {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: 500ms all;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
 }

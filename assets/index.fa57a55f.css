@@ -1,0 +1,31 @@
+
+section[data-v-376dc8fa] {
+  border: 1px solid #d7d7d7;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.subtitle[data-v-376dc8fa] {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.caption[data-v-376dc8fa] {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #888;
+}
+.content[data-v-376dc8fa] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.content .co-avatar[data-v-376dc8fa] {
+  margin-right: 10px;
+}
